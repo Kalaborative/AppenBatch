@@ -1,0 +1,15 @@
+.sky-gradient {
+    background: linear-gradient(to right,#0acffe 0,#495aff 100%);
+}
+
+body {
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+
+.snow {
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+}
+
+#progressBar {
+  margin: auto;
+}

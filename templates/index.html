@@ -1,0 +1,209 @@
+<html>
+<head>
+    <!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="static/css/loading-bar.css">
+<link rel="stylesheet" type="text/css" href="static/css/appen.css">
+<script type="text/javascript" src="static/js/loading-bar.js"></script>
+</head>
+    
+<body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card card-intro sky-gradient mb-4 mt-4">
+            <div class="card-body white-text rgba-black-light text-center">
+              <!--Grid row-->
+              <div class="row d-flex justify-content-center">
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <h1 class="font-weight-bold h2">AppenBatch</h1>
+
+                  <p class="mt-2">An easy visual interface to see if and how much work is available on Ampersand.</p>
+
+                </div>
+                <!--Grid column-->
+              </div>
+              <!--Grid row-->
+            </div>
+          </div>    
+        </div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div class="jumbotron pt-4">
+            <div class="row">
+              <h4 class="text-center mx-auto mb-3">P13379 Speech TX - April</h4>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <!-- Card -->
+                <div class="card snow">
+
+                  <!-- Card image -->
+                  <img class="card-img-top" src="https://www.mediscribes.com/wp-content/uploads/2017/08/customer-service.png" alt="Card image cap" style="height: 240px;">
+
+                  <!-- Card content -->
+                  <div class="card-body pt-1" >
+
+                    <!-- Title -->
+                    <h4 class="card-title"><a>Transcription</a></h4>
+                    <!-- Text -->
+                    <p class="lead">Amount of work: <span id="majorTransWorkNum">N/A</span></p>
+                    <p class="lead">Has Batches Available: <strong><span id="majorTransWorkAvailable">N/A</span></strong></p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->                 
+              </div>
+              <div class="col">
+                 <!-- Card -->
+                <div class="card snow">
+
+                  <!-- Card image -->
+                  <img class="card-img-top" src="https://www.pinclipart.com/picdir/big/361-3614090_trust-quality-assurance-quality-icon-png-clipart.png" alt="Card image cap" style="height: 240px;">
+
+                  <!-- Card content -->
+                  <div class="card-body pt-1">
+
+                    <!-- Title -->
+                    <h4 class="card-title"><a>QA</a></h4>
+                    <!-- Text -->
+                    <p class="lead">Amount of work: <span id="majorQAWorkNum">N/A</span></p>
+                    <p class="lead">Has Batches Available: <strong><span id="majorQAWorkAvailable">N/A</span></strong></p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->                 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p class="updateDate">Last updated on N/A</p>
+              </div>
+            </div>  
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-sm-12">
+          <div class="jumbotron pt-4">
+            <div class="row">
+              <h4 class="text-center mx-auto mb-3">P13379 Speech TX - April Minor</h4>
+            </div>
+            <div class="row mb-3">
+              <div class="col">
+                <!-- Card -->
+                <div class="card snow">
+
+                  <!-- Card image -->
+                  <img class="card-img-top" src="https://www.mediscribes.com/wp-content/uploads/2017/08/customer-service.png" alt="Card image cap" style="height: 240px;">
+
+                  <!-- Card content -->
+                  <div class="card-body pt-1" >
+
+                    <!-- Title -->
+                    <h4 class="card-title"><a>Transcription</a></h4>
+                    <!-- Text -->
+                    <p class="lead">Amount of work: <span id="minorTransWorkNum">N/A</span></p>
+                    <p class="lead">Has Batches Available: <strong><span id="minorTransWorkAvailable">N/A</span></strong></p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->                 
+              </div>
+              <div class="col">
+                 <!-- Card -->
+                <div class="card snow">
+
+                  <!-- Card image -->
+                  <img class="card-img-top" src="https://www.pinclipart.com/picdir/big/361-3614090_trust-quality-assurance-quality-icon-png-clipart.png" alt="Card image cap" style="height: 240px;">
+
+                  <!-- Card content -->
+                  <div class="card-body pt-1">
+
+                    <!-- Title -->
+                    <h4 class="card-title"><a>QA</a></h4>
+                    <!-- Text -->
+                    <p class="lead">Amount of work: <span id="minorQAWorkNum">N/A</span></p>
+                    <p class="lead">Has Batches Available: <strong><span id="minorQAWorkAvailable">N/A</span></strong></p>
+
+                  </div>
+
+                </div>
+                <!-- Card -->                 
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p class="updateDate">Last updated on N/A</p>
+              </div>
+            </div> 
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <a class="btn btn-primary btn-lg btn-block mb-2" href="#" role="button" id="updateBtn" data-toggle="modal" data-target="#centralModalInfo">Update Now</a>
+          <a role="button" class="btn btn-lg btn-deep-orange btn-block" href="https://global.appen.com" target="_blank">Go to Appen Global</a>
+        </div>
+      </div>
+      
+
+    <!-- Central Modal Medium Info -->
+    <div class="modal fade" id="centralModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Header-->
+          <div class="modal-header">
+            <p class="heading lead">AppenBatch</p>
+          </div>
+
+          <!--Body-->
+          <div class="modal-body">
+            <div class="text-center">
+              <div id="statusAnimation">
+                <img src="static/img/flask.svg">
+              </div>
+              <p id="updateStatus">Great! Your results are updating. Please wait for the button to appear to close this modal. This will take about 5 minutes.</p>
+              <div id="progressBar" data-preset="bubble"></div>
+            </div>
+          </div>
+
+          <!--Footer-->
+          <div class="modal-footer justify-content-center">
+            <a type="button" class="btn btn-primary" data-dismiss="modal" id="doneBtn">Done!</a>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!-- Central Modal Medium Info-->
+
+    </div>
+    
+    
+
+    <!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+<script type="text/javascript" src="static/js/appen.js"></script>
+</body>
+</html>
