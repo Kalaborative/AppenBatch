@@ -17,14 +17,14 @@ def api_update_1():
 	global data_dict
 	data_dict = {}
 	chrome_options = Options()
-	chrome_options.binary_location = GOOGLE_CHROME_BIN
+	chrome_options.binary_location = environ.get('GOOGLE_CHROME_BIN')
 	chrome_options.add_argument('--disable-gpu')
 	chrome_options.add_argument('--no-sandbox')
 	chrome_options.add_argument("--headless")
 	chrome_options.add_argument("log-level=3")
 	global browser
 	browser = webdriver
-	browser = browser.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+	browser = browser.Chrome(executable_path=str(environ.get('CHROMEDRIVER_PATH')), chrome_options=chrome_options)
 	browser.implicitly_wait(10)
 	login(browser)
 	return jsonify({'progress': 17})
