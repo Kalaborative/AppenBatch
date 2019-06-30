@@ -1,4 +1,3 @@
-from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -40,20 +39,31 @@ def retrieve_major_data(browser):
 	response_JSON = json.loads(response)
 
 	print("[DEV] Compiling...")
-	transcription_batches = response_JSON["queues"][0]
-	maj_tr_hasBatch = transcription_batches['hasBatchAvailable']
-	maj_tr_numBatch = transcription_batches['subTask']['numBatches']
+	try:
+		transcription_batches = response_JSON["queues"][0]
+		maj_tr_hasBatch = transcription_batches['hasBatchAvailable']
+		maj_tr_numBatch = transcription_batches['subTask']['numBatches']
 
-	QA_batches = response_JSON["queues"][1]
-	maj_qa_hasBatch = QA_batches['hasBatchAvailable']
-	maj_qa_numBatch = QA_batches['subTask']['numBatches']
+		API_response_dict['maj_tr_hasBatch'] = maj_tr_hasBatch
+		API_response_dict['maj_tr_numBatch'] = maj_tr_numBatch
 
-	API_response_dict = {}
-	API_response_dict['maj_tr_hasBatch'] = maj_tr_hasBatch
-	API_response_dict['maj_tr_numBatch'] = maj_tr_numBatch
+	except IndexError:
+		API_response_dict['maj_tr_hasBatch'] = "Info not available"
+		API_response_dict['maj_tr_numBatch'] = "Info not available"		
 
-	API_response_dict['maj_qa_hasBatch'] = maj_qa_hasBatch
-	API_response_dict['maj_qa_numBatch'] = maj_qa_numBatch
+
+	try:
+		QA_batches = response_JSON["queues"][1]
+		maj_qa_hasBatch = QA_batches['hasBatchAvailable']
+		maj_qa_numBatch = QA_batches['subTask']['numBatches']
+
+		API_response_dict['maj_qa_hasBatch'] = maj_qa_hasBatch
+		API_response_dict['maj_qa_numBatch'] = maj_qa_numBatch
+
+	except IndexError:
+		API_response_dict['maj_qa_hasBatch'] = "Info not available"
+		API_response_dict['maj_qa_numBatch'] = "Info not available"	
+
 	return API_response_dict
 
 def retrieve_minor_data(browser):
@@ -65,19 +75,31 @@ def retrieve_minor_data(browser):
 
 
 	print("[DEV] Compiling...")
-	transcription_batches = response_JSON["queues"][0]
-	min_tr_hasBatch = transcription_batches['hasBatchAvailable']
-	min_tr_numBatch = transcription_batches['subTask']['numBatches']
+	try:
+		transcription_batches = response_JSON["queues"][0]
+		min_tr_hasBatch = transcription_batches['hasBatchAvailable']
+		min_tr_numBatch = transcription_batches['subTask']['numBatches']
 
-	QA_batches = response_JSON["queues"][1]
-	min_qa_hasBatch = QA_batches['hasBatchAvailable']
-	min_qa_numBatch = QA_batches['subTask']['numBatches']
+		API_response_dict['min_tr_hasBatch'] = min_tr_hasBatch
+		API_response_dict['min_tr_numBatch'] = min_tr_numBatch
 
-	API_response_dict['min_tr_hasBatch'] = min_tr_hasBatch
-	API_response_dict['min_tr_numBatch'] = min_tr_numBatch
+	except IndexError:
+		API_response_dict['min_tr_hasBatch'] = "Info not available"
+		API_response_dict['min_tr_numBatch'] = "Info not available"		
 
-	API_response_dict['min_qa_hasBatch'] = min_qa_hasBatch
-	API_response_dict['min_qa_numBatch'] = min_qa_numBatch
+
+	try:
+		QA_batches = response_JSON["queues"][1]
+		min_qa_hasBatch = QA_batches['hasBatchAvailable']
+		min_qa_numBatch = QA_batches['subTask']['numBatches']
+
+		API_response_dict['min_qa_hasBatch'] = min_qa_hasBatch
+		API_response_dict['min_qa_numBatch'] = min_qa_numBatch
+
+	except IndexError:
+		API_response_dict['min_qa_hasBatch'] = "Info not available"
+		API_response_dict['min_qa_numBatch'] = "Info not available"	
+	
 	return API_response_dict
 
 def close_browser(browser):

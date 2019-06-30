@@ -25,6 +25,7 @@ def api_update_1():
 	global browser
 	browser = webdriver
 	browser = browser.Chrome(executable_path=str(environ.get('CHROMEDRIVER_PATH')), chrome_options=chrome_options)
+	# browser = browser.Chrome(chrome_options=chrome_options)
 	browser.implicitly_wait(10)
 	login(browser)
 	return jsonify({'progress': 17})
