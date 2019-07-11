@@ -48,7 +48,7 @@ def retrieve_major_data(browser):
 		API_response_dict['maj_tr_numBatch'] = maj_tr_numBatch
 
 	except IndexError:
-		API_response_dict['maj_tr_hasBatch'] = "Info not available"
+		API_response_dict['maj_tr_hasBatch'] = False
 		API_response_dict['maj_tr_numBatch'] = "Info not available"		
 
 
@@ -61,7 +61,7 @@ def retrieve_major_data(browser):
 		API_response_dict['maj_qa_numBatch'] = maj_qa_numBatch
 
 	except IndexError:
-		API_response_dict['maj_qa_hasBatch'] = "Info not available"
+		API_response_dict['maj_qa_hasBatch'] = False
 		API_response_dict['maj_qa_numBatch'] = "Info not available"	
 
 	return API_response_dict
